@@ -1,0 +1,9 @@
+[Unit]
+Description=Baby Monitor Service
+After=multi-user.target
+[Service]
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/python3 /home/pi/sonoff-siri-helper/sonoff-siri-helper.py
+[Install]
+WantedBy=multi-user.target
